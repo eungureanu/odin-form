@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.left-container {
+    width: 50%;
+    /* todo: adjust image in photo app to be lighter/darker to change the contrast with the hero text */
+    background-image: url('img/ImagebyJanBlanickyfromPixabay.jpg');
+    background-size: auto 100%; /* Set height to 100% and width to auto */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Don't repeat the image */
+    width: 50vw; /* Set the container width to 50% of the viewport width */
+    height: 100vh; /* Set the container height to 100% of the viewport height */
+}
+
+.right-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 30px;
+    font-family: Garamond, serif;
+    font-weight: 700;
+
+}
+
+.logo {
+    /* todo: center the logo, make smaller, place between "Visit" and "Prague" */
+    width: 20%;
+}
+
+.hero_text {
+    font-family: "IM Fell English";
+    font-size: 80px;
+    text-align: center;
+    background-color: rgb(255, 255, 255, 0.5)
+}
+
+.credits {
+    /* todo: align this text to the bottom of the screen */
+    font-family: Calibri, sans-serif;
+    text-align: center;
+    background-color: rgb(255, 255, 255, 0.5);
+}
+
+.marketing-text {
+}
