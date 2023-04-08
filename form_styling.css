@@ -14,6 +14,9 @@ body {
     background-repeat: no-repeat; /* Don't repeat the image */
     width: 50vw; /* Set the container width to 50% of the viewport width */
     height: 100vh; /* Set the container height to 100% of the viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .right-container {
@@ -30,6 +33,7 @@ body {
 .logo {
     /* todo: center the logo, make smaller, place between "Visit" and "Prague" */
     width: 20%;
+    align-self: center;
 }
 
 .hero_text {
