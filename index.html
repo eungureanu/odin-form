@@ -28,24 +28,26 @@
 
             <label for="first_name">First Name</label>
             <label for="last_name">Last Name</label>
-            <input type="text" id="first_name">
-            <input type="text" id="last_name">
+            <input type="text" id="first_name" required>
+            <input type="text" id="last_name" required>
 
             <label for="email">Email</label>
             <label for="phone_nr">Phone Number</label>
-            <input type="email" id="email">
-            <input type="number" id="phone_nr">
+            <input type="email" id="email" required>
+            <input type="number" id="phone_nr" required>
 
             <label for="password">Password</label>
             <label for="confirm_password">Confirm Password</label>
-            <input type="password" id="first_name">
-            <input type="password" id="confirm_password">
-                
-            <input type="checkbox" id="accept_terms" name="acceptTerms" value="yes">
-            <label for="accept_terms">I consent to being contacted by a sales representative of Odin Travel to be presented with an offer.</label>
+            <input type="password" id="first_name" required>
+            <input type="password" id="confirm_password" required>
+            
+            <div class="checkbox">
+                <input type="checkbox" id="accept_terms" name="acceptTerms" value="yes">
+                <label for="accept_terms">I consent to being contacted by a sales representative of Odin Travel to be presented with an offer.</label>
+            </div>    
         </form>
         <button>Create Account</button>
-        <div class="marketing-text existing-user">Already have an account? <span>Log in</span> and see our offers for other destinations</div>
+        <div class="marketing-text existing-user">Already have an account? <strong>Log in</strong> and see our offers for other destinations</div>
     </div>
 </body>
 </html>
