@@ -8,7 +8,29 @@
     <link rel="stylesheet" href="form_styling.css">
     <link rel="icon" type="image/x-icon" href="img/fontawesome-icon-trip.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IM+Fell+English">
-
+    <script>
+        function checkPassword() {
+            let x = document.getElementById("password").value;
+            let y = document.getElementById("confirm_password").value;
+            console.log(document.getElementsByTagName("p"));
+            if (x!=y) {
+                console.log("intra in if")
+                document.getElementById("password").style.border="1px solid orange";
+                document.getElementById("confirm_password").style.border="1px solid orange";
+                document.getElementsByTagName("p")[0].innerText = "*Passwords do not match";
+                document.getElementsByTagName("p")[1].innerText = "*Passwords do not match";
+                document.getElementsByTagName("p")[0].classList.add("error");
+                document.getElementsByTagName("p")[1].classList.add("error");
+            } else {
+                document.getElementById("password").style.border="";
+                document.getElementById("confirm_password").style.border="";
+                document.getElementsByTagName("p")[0].innerText = "";
+                document.getElementsByTagName("p")[1].innerText = "";
+                document.getElementsByTagName("p")[0].classList.remove("error");
+                document.getElementsByTagName("p")[1].classList.remove("error");
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="left-container">
@@ -28,26 +50,28 @@
 
             <label for="first_name">First Name</label>
             <label for="last_name">Last Name</label>
-            <input type="text" id="first_name" required>
-            <input type="text" id="last_name" required>
+            <input type="text" id="first_name" name="first_name" required>
+            <input type="text" id="last_name" name="last_name" required>
 
             <label for="email">Email</label>
             <label for="phone_nr">Phone Number</label>
-            <input type="email" id="email" required>
-            <input type="number" id="phone_nr" required>
+            <input type="email" id="email" name="email" required>
+            <input type="number" id="phone_nr" name="phone_nr" required>
 
             <label for="password">Password</label>
             <label for="confirm_password">Confirm Password</label>
-            <input type="password" id="first_name" required>
-            <input type="password" id="confirm_password" required>
+            <input type="password" id="password" name="password" required>
+            <input type="password" id="confirm_password" name="confirm_password"required>
+            <p></p>
+            <p></p>
             
             <div class="checkbox">
                 <input type="checkbox" id="accept_terms" name="acceptTerms" value="yes">
                 <label for="accept_terms">I consent to being contacted by a sales representative of Odin Travel to be presented with an offer.</label>
             </div>    
         </form>
-        <button>Create Account</button>
-        <div class="marketing-text existing-user">Already have an account? <strong>Log in</strong> and see our offers for other destinations</div>
+        <button onclick="checkPassword()">Create Account</button>
+        <div class="marketing-text existing-user">Already have an account? <a href="#">Log in</a> and see our offers for other destinations</div>
     </div>
 </body>
 </html>

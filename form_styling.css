@@ -80,7 +80,7 @@ a:link, a:visited {
 
 form {
     background-color: white;
-    padding: 20px 80px;
+    padding: 15px 80px;
     margin-top: 15px;
     box-shadow: 5px 5px 3px lightgrey;
     display: grid;
@@ -106,6 +106,13 @@ input {
     border: 0.5px solid rgb(50, 50, 50);
     border-radius: 4px;
     height: 25px;
+}
+
+.error {
+    margin: 0;
+    font-family: 'Verdana', sans-serif;
+    font-size: 11px;
+    color: orange;
 }
 
 .checkbox {
@@ -141,6 +148,12 @@ button:hover {
 .existing-user {
     font-size: 14px;
     padding-top: 15px;
+}
+
+.existing-user a {
+    color: #4A99E5;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 strong {
