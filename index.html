@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="form_styling.css">
     <link rel="icon" type="image/x-icon" href="img/fontawesome-icon-trip.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IM+Fell+English">
-    <script>
+    <script src="script.js" defer></script>
+    <!-- <script>
         function checkPassword() {
             let x = document.getElementById("password").value;
             let y = document.getElementById("confirm_password").value;
@@ -30,7 +31,7 @@
                 document.getElementsByTagName("p")[1].classList.remove("error");
             }
         }
-    </script>
+    </script> -->
 </head>
 <body>
     <div class="left-container">
@@ -45,32 +46,53 @@
         <div class="marketing-text">This is not a real online service! <br><br>...but if it were, it would definitely persuade
             you to experience the unique charm of Prague's winding streets, stunning Gothic cathedrals, and impressive
             castle while indulging in delicious Czech cuisine and world-famous beer.</div>
-        <form>
-            <div class="form_headline">Sign up now to receive an offer from Odin Travel</div>
-
-            <label for="first_name">First Name</label>
-            <label for="last_name">Last Name</label>
-            <input type="text" id="first_name" name="first_name" required>
-            <input type="text" id="last_name" name="last_name" required>
-
-            <label for="email">Email</label>
-            <label for="phone_nr">Phone Number</label>
-            <input type="email" id="email" name="email" required>
-            <input type="number" id="phone_nr" name="phone_nr" required>
-
-            <label for="password">Password</label>
-            <label for="confirm_password">Confirm Password</label>
-            <input type="password" id="password" name="password" required>
-            <input type="password" id="confirm_password" name="confirm_password"required>
-            <p></p>
-            <p></p>
-            
-            <div class="checkbox">
-                <input type="checkbox" id="accept_terms" name="acceptTerms" value="yes">
-                <label for="accept_terms">I consent to being contacted by a sales representative of Odin Travel to be presented with an offer.</label>
-            </div>    
+        <form autocomplete="off">
+            <div class="form-control form_headline">
+                <div>Sign up now to receive an offer from Odin Travel</div>
+            </div>
+            <div class="form-control">
+                <label for="first_name">First Name</label>
+                <input type="text" id="first_name" name="first_name" required>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="last_name">Last Name</label>
+                <input type="text" id="last_name" name="last_name" required>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+        
+                <label for="email">E-Mail</label>
+                <input type="email" id="email" name="email" required>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="phone">Phone Number</label>
+                <input type="number" id="phone" name="phone_nr" required>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+        
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+                <small>Error message</small>
+            </div>
+            <div class="form-control checkbox">
+                <div>
+                    <input type="checkbox" id="accept_terms" name="acceptTerms" value="yes">
+                    <label for="accept_terms">I consent to being contacted by a sales representative of Odin Travel to be
+                        presented with an offer.</label>
+                    <small>Error message</small>
+                </div>
+            </div>
+        
         </form>
-        <button onclick="checkPassword()">Create Account</button>
+        <button id="button">Create Account</button>
         <div class="marketing-text existing-user">Already have an account? <a href="#">Log in</a> and see our offers for other destinations</div>
     </div>
 </body>
