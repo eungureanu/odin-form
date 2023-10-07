@@ -66,7 +66,6 @@ a:link, a:visited {
 
 .right-container {
     width: 70%;
-    height: ;
     display: flex;
     flex-direction: column;
     justify-content: center;
